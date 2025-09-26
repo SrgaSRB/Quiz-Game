@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuizService.Infrastructure.Auth
+namespace QuizService.Domain.Enums
 {
-    internal class JwtTokenService
+    public enum UserRole
     {
+        User = 1,
+        Admin = 2
     }
+
 }

@@ -28,10 +28,10 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
-          {/* <Route element={<RequireAuth><RootLayout /></RequireAuth>}>
-            <Route path="/app" element={<RequireRole only='user'><UserLayout /></RequireRole>} > */}
-          <Route element={<RootLayout />}>
-            <Route path="/app" element={<UserLayout />} >
+          {/* <Route element={<RootLayout />}> */}
+          {/* <Route path="/app" element={<UserLayout />} > */}
+          <Route element={<RequireAuth><RootLayout /></RequireAuth>}>
+            <Route path="/app" element={<RequireRole only='user'><UserLayout /></RequireRole>} >
               <Route index element={<QuizzesPage />} />
               <Route path='rank-list' element={<RangListPage />} />
               <Route path='quizzes' element={<QuizzesPage />} />
@@ -41,10 +41,10 @@ function App() {
             </Route>
           </Route>
 
-          {/* <Route element={<RequireAuth><RootLayout /></RequireAuth>}>
-            <Route path="/admin" element={<RequireRole only='admin'><AdminLayout /></RequireRole>} > */}
-          <Route element={<RootLayout />}>
-            <Route path="/admin" element={<AdminLayout />} >
+          {/* <Route element={<RootLayout />}> */}
+          {/* <Route path="/admin" element={<AdminLayout />} > */}
+          <Route element={<RequireAuth><RootLayout /></RequireAuth>}>
+            <Route path="/admin" element={<RequireRole only='admin'><AdminLayout /></RequireRole>} >
               <Route path='settings' element={<AdminPage />} />
               <Route path='add-quiz' element={<AddQuizPage />} />
             </Route>

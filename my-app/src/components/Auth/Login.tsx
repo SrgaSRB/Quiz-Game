@@ -1,6 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
+import Loader from "../shared/Loader";
+import { useNavigate } from "react-router-dom";
+import { authService } from "../../services/authService";
+import { useAuth } from "./AuthProvider";
 
 const Login: React.FC = () => {
+
+    const [usernameOrEmail, setUsernameOrEmail] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
+    const [error, setError] = useState<string>("");
+
+    const { setToken } = useAuth();
+    const [loading, setLoading] = useState<boolean>(false);
+
+    const navigate = useNavigate();
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+
+        if (!usernameOrEmail) {
+            setError("Username/email is required");
+            return;
+        }
+
+        if (!password) {
+            setError("Password is required");
+            return;
+        }
+
+        setError("");
+        setLoading(true);
+
+        try {
+            const response = await authService.login(usernameOrEmail, password);
+
+            if (response.status) {
+                const token = response.data!;
+                setToken(token);
+                navigate("/app/quizzes", { replace: true });
+            } else {
+                setError(response.message || "Login failed");
+            }
+        } catch (err) {
+            setError("An error occurred during login");
+        } finally {
+            setLoading(false);
+        }
+    };
+
+
     return (
         <section className="login-section">
             <div className="w-layout-blockcontainer container w-container">
@@ -14,12 +62,27 @@ const Login: React.FC = () => {
                     </div>
                     <div className="form-block w-form">
                         <div className="text-block-5">Welcome back!</div>
-                        <form className="form">
+                        <form className="form" onSubmit={(e) => handleSubmit(e)}>
+
                             <label className="label">Username/email</label>
-                            <input className="input login-input w-input" maxLength={256} placeholder="Enter your username/email" type="text" />
+                            <input className="input login-input w-input" maxLength={256} placeholder="Enter your username/email" type="text"
+                                value={usernameOrEmail}
+                                onChange={(e) => setUsernameOrEmail(e.target.value)}
+                            />
+
                             <label className="label">Password</label>
-                            <input className="input login-input w-input" maxLength={256} placeholder="Enter your password" type="password" />
-                            <input type="submit" data-wait="Please wait..." className="button-1 w-button" value="Login" />
+                            <input className="input login-input w-input" maxLength={256} placeholder="Enter your password" type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+
+                            {error && <div className="error-message">{error}</div>}
+
+                            {loading ? (
+                                <Loader />
+                            ) : (
+                                <input type="submit" data-wait="Please wait..." className="button-1 w-button" value="Login" />
+                            )}
                         </form>
                         <div className="div-block-6">
                             <div>Don &#x27;t have account?</div>

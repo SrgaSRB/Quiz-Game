@@ -1,41 +1,94 @@
-// components/Auth/AuthProvider.tsx
 import { createContext, useContext, useEffect, useState } from "react";
 
-type Role = "admin" | "user" | null;
+type Role = "admin" | "user";
 export interface User {
+  id: string;
+  name: string;
   username: string;
   email: string;
-  role: Exclude<Role, null>;
+  role: Role;
   token: string;
 }
 
 type AuthCtx = {
   user: User | null;
   loading: boolean;
-  loginAs: (u: User) => void;
+  setToken: (jwt: string) => void;
   logout: () => void;
 };
 
 const AuthContext = createContext<AuthCtx>({
   user: null,
   loading: true,
-  loginAs: () => {},
+  setToken: () => {},
   logout: () => {},
 });
 
 export const useAuth = () => useContext(AuthContext);
 
-function decryptUser(ciphertext: string): User | null {
-  try {
-    const json = atob(ciphertext); 
-    const obj = JSON.parse(json);
-    if (obj && obj.role && obj.token) return obj as User;
-  } catch {}
-  return null;
+type JwtPayload = {
+  id: string;
+  name: string;
+  username: string;
+  email: string;
+  role: Role;
+  exp: number; 
+};
+
+function base64UrlDecode(input: string) {
+  // JWT koristi base64url varijantu
+  const pad = (s: string) => s + "=".repeat((4 - (s.length % 4)) % 4);
+  const b64 = pad(input.replace(/-/g, "+").replace(/_/g, "/"));
+  return atob(b64);
 }
 
-function encryptUser(u: User): string {
-  return btoa(JSON.stringify(u));
+function parseJwt(token: string): JwtPayload | null {
+  try {
+    const parts = token.split(".");
+    if (parts.length !== 3) return null;
+    const payloadJson = base64UrlDecode(parts[1]);
+    const payload = JSON.parse(payloadJson);
+
+    // Map Microsoft role claim to our Role type
+    let role: Role;
+    if (payload["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"]) {
+      role = payload["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
+    } else {
+      role = payload.role;
+    }
+
+    return {
+      id: payload.id,
+      name: payload.name,
+      username: payload.username,
+      email: payload.email,
+      role: role.toLowerCase(),
+      exp: payload.exp,
+    } as JwtPayload;
+  } catch {
+    return null;
+  }
+}
+
+function isExpired(expSeconds?: number) {
+  if (!expSeconds) return true;
+  const now = Math.floor(Date.now() / 1000);
+  return expSeconds <= now;
+}
+
+function userFromToken(token: string): User | null {
+  const payload = parseJwt(token);
+  if (!payload) return null;
+  if (isExpired(payload.exp)) return null;
+
+  return {
+    id: payload.id,
+    name: payload.name,
+    username: payload.username,
+    email: payload.email,
+    role: payload.role,
+    token,
+  };
 }
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
@@ -43,27 +96,38 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const blob = localStorage.getItem("user");
-    if (blob) {
-      const u = decryptUser(blob);
-      setUser(u);
+    const token = localStorage.getItem("authToken");
+    if (token) {
+      const u = userFromToken(token);
+      
+      if (u) {
+        setUser(u);
+      } else {
+        localStorage.removeItem("authToken");
+      }
+
     }
     setLoading(false);
   }, []);
 
-  function loginAs(u: User) {
-    const enc = encryptUser(u);
-    localStorage.setItem("user", enc);
-    setUser(u);
+  function setToken(jwt: string) {
+    const u = userFromToken(jwt);
+    if (u) {
+      localStorage.setItem("authToken", jwt);
+      setUser(u);
+    } else {
+      localStorage.removeItem("authToken");
+      setUser(null);
+    }
   }
 
   function logout() {
-    localStorage.removeItem("user");
+    localStorage.removeItem("authToken");
     setUser(null);
   }
 
   return (
-    <AuthContext.Provider value={{ user, loading, loginAs, logout }}>
+    <AuthContext.Provider value={{ user, loading, setToken, logout }}>
       {children}
     </AuthContext.Provider>
   );

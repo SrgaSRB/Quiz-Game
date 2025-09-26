@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "khM2Dce0XlE=",
+  "dgSpecHash": "/MIdN5VYt0M=",
   "success": true,
   "projectFilePath": "C:\\Users\\SRDJAN\\Desktop\\Projects\\Quiz\\QuizService\\QuizService.Aplication\\QuizService.Aplication.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\SRDJAN\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,0 +1,14 @@
+# Visual Studio / .NET
+.vs/
+*.user
+*.suo
+bin/
+obj/
+
+# VS Code
+.vscode/
+
+# Node/React
+node_modules/
+dist/
+build/
