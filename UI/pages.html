@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. https://webflow.com -->
+<!-- Last Published: Wed Sep 24 2025 23:54:59 GMT+0000 (Coordinated Universal Time) -->
+<html data-wf-domain="quiz-c43a31.webflow.io" data-wf-page="68cb608040ea6feccc11acd4" data-wf-site="68cb607f40ea6feccc11acb9" data-wf-status="1">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Quiz</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="Webflow" name="generator"/>
+        <link href="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/css/quiz-c43a31.webflow.shared.2ca10acd3.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com" rel="preconnect"/>
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            WebFont.load({
+                google: {
+                    families: ["Roboto:100,200,300,regular,500,600,700,800,900,italic"]
+                }
+            });
+        </script>
+        <script type="text/javascript">
+            !function(o, c) {
+                var n = c.documentElement
+                  , t = " w-mod-";
+                n.className += t + "js",
+                ("ontouchstart"in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+            }(window, document);
+        </script>
+        <link href="https://cdn.prod.website-files.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="https://cdn.prod.website-files.com/img/webclip.png" rel="apple-touch-icon"/>
+    </head>
+    <body className="body">
+        <section className="main-section">
+            <section className="navbar-section">
+                <div className="w-layout-blockcontainer container nav-container w-container">
+                    <div className="navbar-wrapper">
+                        <div className="quiz-logo-div">
+                            <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb653b6fef412761d4ca6b_crown.png" loading="lazy" alt="" className="image"/>
+                            <div className="text-block">
+                                QuizHub<br/>
+                            </div>
+                        </div>
+                        <div className="nav-user-div">
+                            <div className="div-block">
+                                <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 939.982666015625px" srcset="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-500.jpg 500w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-800.jpg 800w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-1080.jpg 1080w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-1600.jpg 1600w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-2000.jpg 2000w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-2600.jpg 2600w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-3200.jpg 3200w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image.jpg 3671w" alt="" className="image-2"/>
+                            </div>
+                            <div className="div-block-2">
+                                <div className="nav-user-username">@srga</div>
+                                <div className="nav-user-email">delicdevelopment@gmail.com</div>
+                            </div>
+                        </div>
+                        <div className="nav-pages-div">
+                            <div className="nav-page-div nav-page-div-select">
+                                <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb6853c05c947223299e91_home.png" loading="lazy" alt="" className="image-3"/>
+                                <div>Home</div>
+                            </div>
+                            <div className="nav-page-div">
+                                <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb6853c05c947223299e91_home.png" loading="lazy" alt="" className="image-3"/>
+                                <div>Home</div>
+                            </div>
+                            <div className="nav-page-div">
+                                <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb6853c05c947223299e91_home.png" loading="lazy" alt="" className="image-3"/>
+                                <div>Home</div>
+                            </div>
+                            <div className="nav-page-div">
+                                <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb6853c05c947223299e91_home.png" loading="lazy" alt="" className="image-3"/>
+                                <div>Home</div>
+                            </div>
+                            <div className="nav-page-div">
+                                <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb6853c05c947223299e91_home.png" loading="lazy" alt="" className="image-3"/>
+                                <div>Home</div>
+                            </div>
+                        </div>
+                        <div className="div-block-3"></div>
+                        <div className="div-block-7">
+                            <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68ccac9159cb7c28073f3df3_exit.png" loading="lazy" alt="" className="image-5"/>
+                            <div className="text-block-6">Logout</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="main-windows-section">
+                <section className="quizzes-section">
+                    <div className="w-layout-blockcontainer container w-container">
+                        <div className="quizzes-wrapper">
+                            <div>
+                                <div className="text-block-7">Available quizzes</div>
+                                <div className="text-block-8">Find and solve quizzes in different fields of knowledge</div>
+                            </div>
+                            <div className="quizzes-filter-div">
+                                <div className="div-block-8">
+                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd53ab37876bc16e0ec576_filter%20(1).png" loading="lazy" alt="" className="image-6"/>
+                                    <div className="text-block-9">Search and filters</div>
+                                </div>
+                                <div className="w-form">
+                                    <form id="email-form-2" name="email-form-2" data-name="Email Form 2" method="get" className="form-2" data-wf-page-id="68cb608040ea6feccc11acd4" data-wf-element-id="2a3a42dc-3d24-47ee-60ba-04850ace4a82" data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e">
+                                        <div className="div-block-9">
+                                            <input className="input filter-search w-node-_2a3a42dc-3d24-47ee-60ba-04850ace4a85-cc11acd4 w-input" maxLength={256} name="name" data-name="Name" placeholder="" type="text" id="name"/>
+                                            <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd54a9de2f761450eb4020_search-interface-symbol.png" loading="lazy" alt="" className="image-7"/>
+                                        </div>
+                                        <select id="field-2" name="field-2" data-name="Field 2" className="filter-select w-select">
+                                            <option value="">Select one...</option>
+                                        </select>
+                                        <select id="field-2" name="field-2" data-name="Field 2" className="filter-select w-select">
+                                            <option value="">Select one...</option>
+                                        </select>
+                                    </form>
+                                </div>
+                                <div className="text-block-10">
+                                    Showing 8 of 8 quizzes<br/>
+                                </div>
+                            </div>
+                            <div className="quizzes-list-div">
+                                <div className="quiz-div">
+                                    <div className="div-block-11">
+                                        <div className="div-block-10">
+                                            <div>Programming</div>
+                                        </div>
+                                        <div className="div-block-10 easy-quiz-tag">
+                                            <div>Easy</div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="text-block-11">JavaScript Basic</div>
+                                        <div className="text-block-12">Basic concepts of the JavaScript programming language - variables, functions, strings</div>
+                                    </div>
+                                    <div className="div-block-13">
+                                        <div className="div-block-12">
+                                            <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd586a9a34b773ec2e3e6a_question-mark.png" loading="lazy" alt="" className="image-8"/>
+                                            <div>20</div>
+                                        </div>
+                                        <div className="div-block-12">
+                                            <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd586aefc709aeb71bd111_hourglass.png" loading="lazy" alt="" className="image-8"/>
+                                            <div>20 min</div>
+                                        </div>
+                                        <div className="div-block-12">
+                                            <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd586abfb7916aaa1fab4f_people.png" loading="lazy" alt="" className="image-8"/>
+                                            <div>23</div>
+                                        </div>
+                                    </div>
+                                    <div className="div-block-15">
+                                        <div className="div-block-14">
+                                            <div>javascript</div>
+                                        </div>
+                                        <div className="div-block-14">
+                                            <div>basic</div>
+                                        </div>
+                                    </div>
+                                    <a className="button-1 w-button">Start Quiz</a>
+                                </div>
+                                <div className="quiz-div">
+                                    <div className="div-block-11">
+                                        <div className="div-block-10">
+                                            <div>Programming</div>
+                                        </div>
+                                        <div className="div-block-10 hard-quiz-tag">
+                                            <div>Easy</div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="text-block-11">JavaScript Basic</div>
+                                        <div className="text-block-12">Basic concepts of the JavaScript programming language - variables, functions, strings</div>
+                                    </div>
+                                    <div className="div-block-13">
+                                        <div className="div-block-12">
+                                            <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd586a9a34b773ec2e3e6a_question-mark.png" loading="lazy" alt="" className="image-8"/>
+                                            <div>20</div>
+                                        </div>
+                                        <div className="div-block-12">
+                                            <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd586aefc709aeb71bd111_hourglass.png" loading="lazy" alt="" className="image-8"/>
+                                            <div>20 min</div>
+                                        </div>
+                                        <div className="div-block-12">
+                                            <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd586abfb7916aaa1fab4f_people.png" loading="lazy" alt="" className="image-8"/>
+                                            <div>23</div>
+                                        </div>
+                                    </div>
+                                    <div className="div-block-15">
+                                        <div className="div-block-14">
+                                            <div>javascript</div>
+                                        </div>
+                                        <div className="div-block-14">
+                                            <div>basic</div>
+                                        </div>
+                                    </div>
+                                    <a className="button-1 w-button">Start Quiz</a>
+                                </div>
+                                <div className="quiz-div">
+                                    <div className="div-block-11">
+                                        <div className="div-block-10">
+                                            <div>Programming</div>
+                                        </div>
+                                        <div className="div-block-10 medium-quiz-tag">
+                                            <div>Easy</div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="text-block-11">JavaScript Basic</div>
+                                        <div className="text-block-12">Basic concepts of the JavaScript programming language - variables, functions, strings</div>
+                                    </div>
+                                    <div className="div-block-13">
+                                        <div className="div-block-12">
+                                            <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd586a9a34b773ec2e3e6a_question-mark.png" loading="lazy" alt="" className="image-8"/>
+                                            <div>20</div>
+                                        </div>
+                                        <div className="div-block-12">
+                                            <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd586aefc709aeb71bd111_hourglass.png" loading="lazy" alt="" className="image-8"/>
+                                            <div>20 min</div>
+                                        </div>
+                                        <div className="div-block-12">
+                                            <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd586abfb7916aaa1fab4f_people.png" loading="lazy" alt="" className="image-8"/>
+                                            <div>23</div>
+                                        </div>
+                                    </div>
+                                    <div className="div-block-15">
+                                        <div className="div-block-14">
+                                            <div>javascript</div>
+                                        </div>
+                                        <div className="div-block-14">
+                                            <div>basic</div>
+                                        </div>
+                                    </div>
+                                    <a className="button-1 w-button">Start Quiz</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="rang-list-section">
+                    <div className="w-layout-blockcontainer container w-container">
+                        <div className="rang-list-wrapper">
+                            <div className="div-block-17">
+                                <div className="div-block-16">
+                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd60ac724ce1dc4792e698_rank.png" loading="lazy" alt=""/>
+                                    <div className="text-block-13">Rank list</div>
+                                </div>
+                                <div>
+                                    <div className="text-block-14">Compare your results with other users</div>
+                                </div>
+                            </div>
+                            <div className="rang-list-filter-div">
+                                <div className="rang-list-filter rang-list-filter-selected">
+                                    <div>Global rang list</div>
+                                </div>
+                                <div className="rang-list-filter">
+                                    <div>Weekly leaders</div>
+                                </div>
+                                <div className="rang-list-filter">
+                                    <div>By quizzes</div>
+                                </div>
+                            </div>
+                            <div className="div-block-20">
+                                <div className="div-block-23">
+                                    <div className="text-block-15">The best players of all time</div>
+                                    <div className="text-block-16">Ranking based on total points</div>
+                                    <div className="form-block-2 w-form">
+                                        <form id="email-form-3" name="email-form-3" data-name="Email Form 3" method="get" data-wf-page-id="68cb608040ea6feccc11acd4" data-wf-element-id="110432c4-9032-52f2-9b7b-72832c6a0ab9" data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e">
+                                            <select id="field-3" name="field-3" data-name="Field 3" className="filter-select rang-filter w-select">
+                                                <option value="">Select one...</option>
+                                                <option value="First">First choice</option>
+                                                <option value="Second">Second choice</option>
+                                                <option value="Third">Third choice</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div className="rang-list-user-list">
+                                    <div className="rang-list-user-div">
+                                        <div className="div-block-19">
+                                            <div className="div-block-65">
+                                                <div className="text-block-18">1</div>
+                                            </div>
+                                            <div className="div-block-18">
+                                                <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 939.982666015625px" srcset="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-500.jpg 500w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-800.jpg 800w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-1080.jpg 1080w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-1600.jpg 1600w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-2000.jpg 2000w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-2600.jpg 2600w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-3200.jpg 3200w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image.jpg 3671w" alt="" className="image-9"/>
+                                            </div>
+                                            <div className="div-block-25">
+                                                <div className="text-block-19">Srdjan Delic</div>
+                                                <div>@srga</div>
+                                            </div>
+                                            <div className="div-block-26">
+                                                <div className="div-block-24">
+                                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2d58daa34f65f1564e909_back-in-time.png" loading="lazy" alt="" className="image-10"/>
+                                                    <div>12:50 min</div>
+                                                </div>
+                                                <div className="div-block-24">
+                                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2d58d1c368496fbfead8c_calendar.png" loading="lazy" alt="" className="image-10"/>
+                                                    <div>17.09.2025</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="div-block-21">
+                                            <div className="div-block-22">
+                                                <div>200</div>
+                                                <div className="text-block-17">poena</div>
+                                            </div>
+                                            <div className="div-block-22">
+                                                <div>200</div>
+                                                <div className="text-block-17">prosek</div>
+                                            </div>
+                                            <div className="div-block-22">
+                                                <div>200</div>
+                                                <div className="text-block-17">kvizova</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="rang-list-user-div">
+                                        <div className="div-block-19">
+                                            <div className="div-block-65">
+                                                <div className="text-block-18">1</div>
+                                            </div>
+                                            <div className="div-block-18">
+                                                <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 939.982666015625px" srcset="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-500.jpg 500w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-800.jpg 800w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-1080.jpg 1080w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-1600.jpg 1600w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-2000.jpg 2000w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-2600.jpg 2600w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image-p-3200.jpg 3200w, https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb66291dbf3576d1ebac4b_crop-profile-image.jpg 3671w" alt="" className="image-9"/>
+                                            </div>
+                                            <div className="div-block-25">
+                                                <div className="text-block-19">Srdjan Delic</div>
+                                                <div>@srga</div>
+                                            </div>
+                                            <div className="div-block-26">
+                                                <div className="div-block-24">
+                                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2d58daa34f65f1564e909_back-in-time.png" loading="lazy" alt="" className="image-10"/>
+                                                    <div>12:50 min</div>
+                                                </div>
+                                                <div className="div-block-24">
+                                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2d58d1c368496fbfead8c_calendar.png" loading="lazy" alt="" className="image-10"/>
+                                                    <div>17.09.2025</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="div-block-21">
+                                            <div className="div-block-22">
+                                                <div>200</div>
+                                                <div className="text-block-17">poena</div>
+                                            </div>
+                                            <div className="div-block-22">
+                                                <div>200</div>
+                                                <div className="text-block-17">prosek</div>
+                                            </div>
+                                            <div className="div-block-22">
+                                                <div>200</div>
+                                                <div className="text-block-17">kvizova</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="quiz-selection">
+                    <div className="w-layout-blockcontainer quiz-container w-container">
+                        <div className="quiz-wrapper">
+                            <div className="quiz-header-div">
+                                <div>
+                                    <div className="text-block-20">JavaScript Osnove</div>
+                                    <div className="text-block-21">
+                                        Osnovni koncepti JavaScript programskog jezika<br/>
+                                    </div>
+                                </div>
+                                <div className="div-block-28">
+                                    <div className="div-block-27">
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2d8d324046614ce76beb9_hourglass%20(1).png" loading="lazy" alt="" className="image-11"/>
+                                        <div className="text-block-22">15:00</div>
+                                    </div>
+                                    <div className="text-block-23">Timeleft</div>
+                                </div>
+                            </div>
+                            <div className="quiz-quizzes-count-div">
+                                <div className="text-block-24">1 of 10</div>
+                                <div className="div-block-29">
+                                    <div className="div-block-30"></div>
+                                </div>
+                            </div>
+                            <div className="div-block-32">
+                                <div className="quiz-question">
+                                    <div className="quiz-question-header">
+                                        <div className="div-block-35">
+                                            <div className="div-block-34">
+                                                <div className="text-block-25">One correct answer</div>
+                                            </div>
+                                            <div>
+                                                <div className="text-block-26">5 points</div>
+                                            </div>
+                                        </div>
+                                        <div className="text-block-27">
+                                            Koja je ispravka sintaksa za kreiranje varijable u JavaScript-u?<br/>
+                                        </div>
+                                    </div>
+                                    <div className="form-block-3 w-form">
+                                        <form id="email-form-4" name="email-form-4" data-name="Email Form 4" method="get" data-wf-page-id="68cb608040ea6feccc11acd4" data-wf-element-id="30997419-486a-4181-7ee3-d9eebf742566" data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e">
+                                            <label className="w-radio">
+                                                <input type="radio" data-name="Radio" id="radio" name="radio" className="w-form-formradioinput w-radio-input" value="Radio"/>
+                                                <span className="w-form-label" htmlFor="radio">Radio</span>
+                                            </label>
+                                            <label className="w-radio">
+                                                <input type="radio" data-name="Radio" id="radio" name="radio" className="w-form-formradioinput w-radio-input" value="Radio"/>
+                                                <span className="w-form-label" htmlFor="radio">Radio</span>
+                                            </label>
+                                            <label className="w-checkbox">
+                                                <input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" className="w-checkbox-input"/>
+                                                <span className="w-form-label" htmlFor="checkbox">Checkbox</span>
+                                            </label>
+                                            <label className="w-checkbox">
+                                                <input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" className="w-checkbox-input" checked=""/>
+                                                <span className="w-form-label" htmlFor="checkbox">Checkbox</span>
+                                            </label>
+                                            <input className="input quiz-question-input w-input" maxLength={256} name="field-4" data-name="Field 4" placeholder="Example Text" type="text" id="field-4" />
+                                        </form>
+                                    </div>
+                                    <div className="quiz-question-bottom">
+                                        <a className="button-1 quiz-button-previus w-button">Previous Question</a>
+                                        <a className="button-1 quiz-question-button-next w-button">Next Question</a>
+                                    </div>
+                                </div>
+                                <div className="question-navigation">
+                                    <div className="text-block-28">Navigation</div>
+                                    <div className="question-navigation-div">
+                                        <div className="question-navigation-question-number-div">
+                                            <div>1</div>
+                                        </div>
+                                        <div className="question-navigation-question-number-div question-navigation-question-number-div-select">
+                                            <div>1</div>
+                                        </div>
+                                        <div className="question-navigation-question-number-div">
+                                            <div>1</div>
+                                        </div>
+                                        <div className="question-navigation-question-number-div">
+                                            <div>1</div>
+                                        </div>
+                                        <div className="question-navigation-question-number-div">
+                                            <div>1</div>
+                                        </div>
+                                        <div className="question-navigation-question-number-div">
+                                            <div>1</div>
+                                        </div>
+                                    </div>
+                                    <div className="div-block-36">
+                                        <a className="button-1 finis-quiz-button w-button">Finis Quiz</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="finish-quiz-section">
+                    <div className="w-layout-blockcontainer container w-container">
+                        <div className="finish-quiz-wrapper">
+                            <div className="finish-quiz-header">
+                                <div className="w-layout-vflex flex-block">
+                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2e18b4b04395f7ddc51ce_research.png" loading="lazy" alt="" className="image-12"/>
+                                    <div className="text-block-31">Quiz results</div>
+                                </div>
+                                <div className="text-block-30">JavaScript Osnove</div>
+                                <div className="text-block-29">
+                                    Osnovni koncepti JavaScript programskog jezika<br/>
+                                </div>
+                            </div>
+                            <div className="finish-quiz-main-resault">
+                                <div>
+                                    <div className="div-block-37">
+                                        <div className="div-block-38">
+                                            <div className="text-block-32">0%</div>
+                                            <div className="text-block-33">Total score</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="div-block-39">
+                                    <div className="div-block-40"></div>
+                                </div>
+                                <div className="div-block-41">
+                                    <div className="div-block-42">
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2e570f75fe458a72de339_coin%20(1).png" loading="lazy" alt="" className="image-13"/>
+                                        <div>Points 8/30</div>
+                                    </div>
+                                    <div className="div-block-42">
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2e5c22d15bebcf2d7c206_check.png" loading="lazy" alt="" className="image-13"/>
+                                        <div>Correct answers 8/30</div>
+                                    </div>
+                                    <div className="div-block-42">
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd586aefc709aeb71bd111_hourglass.png" loading="lazy" alt="" className="image-13"/>
+                                        <div>Time 13:11</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="finish-quiz-answers-list-block">
+                                <div className="text-block-34">Detailed review of answers</div>
+                                <div className="finish-quiz-answers-list-div">
+                                    <div className="finish-quiz-answers-div">
+                                        <div className="div-block-49">
+                                            <div className="text-block-35">
+                                                Koja je ispravka sintaksa za kreiranje varijable u JavaScript-u?<br/>
+                                            </div>
+                                            <div className="div-block-50">
+                                                <div>3/5 poena </div>
+                                            </div>
+                                        </div>
+                                        <div className="div-block-45">
+                                            <div>Oprions:</div>
+                                            <div className="div-block-44">
+                                                <div className="div-block-43">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                                <div className="div-block-43">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                                <div className="div-block-43 finish-quiz-correct-answer">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                                <div className="div-block-43">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                                <div className="div-block-43">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                                <div className="div-block-43 finish-quiz-correct-answer">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="div-block-48">
+                                            <div>
+                                                <div>Your answer:</div>
+                                                <div className="div-block-47">
+                                                    <div className="div-block-46">
+                                                        <div>var myVar = 5;</div>
+                                                    </div>
+                                                    <div className="div-block-46">
+                                                        <div>var myVar = 5;</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div>Correct answer:</div>
+                                                <div className="div-block-47">
+                                                    <div className="div-block-46 finish-quiz-correct-answer-div">
+                                                        <div>var myVar = 5;</div>
+                                                    </div>
+                                                    <div className="div-block-46 finish-quiz-correct-answer-div">
+                                                        <div>var myVar = 5;</div>
+                                                    </div>
+                                                    <div className="div-block-46 finish-quiz-correct-answer-div">
+                                                        <div>var myVar = 5;</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="finish-quiz-answers-div">
+                                        <div className="div-block-49">
+                                            <div className="text-block-35">
+                                                Koja je ispravka sintaksa za kreiranje varijable u JavaScript-u?<br/>
+                                            </div>
+                                            <div className="div-block-50">
+                                                <div>3/5 poena </div>
+                                            </div>
+                                        </div>
+                                        <div className="div-block-45">
+                                            <div>Oprions:</div>
+                                            <div className="div-block-44">
+                                                <div className="div-block-43">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                                <div className="div-block-43">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                                <div className="div-block-43 finish-quiz-correct-answer">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                                <div className="div-block-43">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                                <div className="div-block-43">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                                <div className="div-block-43 finish-quiz-correct-answer">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="div-block-48">
+                                            <div>
+                                                <div>Your answer:</div>
+                                                <div className="div-block-47">
+                                                    <div className="div-block-46">
+                                                        <div>var myVar = 5;</div>
+                                                    </div>
+                                                    <div className="div-block-46">
+                                                        <div>var myVar = 5;</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div>Correct answer:</div>
+                                                <div className="div-block-47">
+                                                    <div className="div-block-46 finish-quiz-correct-answer-div">
+                                                        <div>var myVar = 5;</div>
+                                                    </div>
+                                                    <div className="div-block-46 finish-quiz-correct-answer-div">
+                                                        <div>var myVar = 5;</div>
+                                                    </div>
+                                                    <div className="div-block-46 finish-quiz-correct-answer-div">
+                                                        <div>var myVar = 5;</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="finish-quiz-answers-div">
+                                        <div className="div-block-49">
+                                            <div className="text-block-35">
+                                                Koja je ispravka sintaksa za kreiranje varijable u JavaScript-u?<br/>
+                                            </div>
+                                            <div className="div-block-50">
+                                                <div>3/5 poena </div>
+                                            </div>
+                                        </div>
+                                        <div className="div-block-45">
+                                            <div>Oprions:</div>
+                                            <div className="div-block-44">
+                                                <div className="div-block-43">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                                <div className="div-block-43">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                                <div className="div-block-43 finish-quiz-correct-answer">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                                <div className="div-block-43">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                                <div className="div-block-43">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                                <div className="div-block-43 finish-quiz-correct-answer">
+                                                    <div>var myVar = 5;</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="div-block-48">
+                                            <div>
+                                                <div>Your answer:</div>
+                                                <div className="div-block-47">
+                                                    <div className="div-block-46">
+                                                        <div>var myVar = 5;</div>
+                                                    </div>
+                                                    <div className="div-block-46">
+                                                        <div>var myVar = 5;</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div>Correct answer:</div>
+                                                <div className="div-block-47">
+                                                    <div className="div-block-46 finish-quiz-correct-answer-div">
+                                                        <div>var myVar = 5;</div>
+                                                    </div>
+                                                    <div className="div-block-46 finish-quiz-correct-answer-div">
+                                                        <div>var myVar = 5;</div>
+                                                    </div>
+                                                    <div className="div-block-46 finish-quiz-correct-answer-div">
+                                                        <div>var myVar = 5;</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="profile-section">
+                    <div className="w-layout-blockcontainer container w-container">
+                        <div className="profile-wrapper">
+                            <div>
+                                <div className="text-block-36">My results</div>
+                                <div className="text-block-37">An overview of all the quizzes you have solved and an analysis of your progress</div>
+                            </div>
+                            <div className="div-block-53">
+                                <div className="div-block-52">
+                                    <div className="div-block-51">
+                                        <div className="text-block-38">Total quizzes</div>
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2efd247db02516582147c_task.png" loading="lazy" alt="" className="image-14"/>
+                                    </div>
+                                    <div>
+                                        <div className="text-block-40">6</div>
+                                        <div className="text-block-39">Finished</div>
+                                    </div>
+                                </div>
+                                <div className="div-block-52">
+                                    <div className="div-block-51">
+                                        <div className="text-block-38">Average score</div>
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2efd23a88713d1aaccd63_rise.png" loading="lazy" alt="" className="image-14"/>
+                                    </div>
+                                    <div>
+                                        <div className="text-block-40">6</div>
+                                        <div className="text-block-39">Average</div>
+                                    </div>
+                                </div>
+                                <div className="div-block-52">
+                                    <div className="div-block-51">
+                                        <div className="text-block-38">Best result</div>
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2efd24fd388226c45a79b_exam.png" loading="lazy" alt="" className="image-14"/>
+                                    </div>
+                                    <div>
+                                        <div className="text-block-40">6</div>
+                                        <div className="text-block-39">maximum</div>
+                                    </div>
+                                </div>
+                                <div className="div-block-52">
+                                    <div className="div-block-51">
+                                        <div className="text-block-38">Total points</div>
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2e570f75fe458a72de339_coin%20(1).png" loading="lazy" alt="" className="image-14"/>
+                                    </div>
+                                    <div>
+                                        <div className="text-block-40">6</div>
+                                        <div className="text-block-39">Points</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="profile-quizzes-list-block">
+                                <div className="profile-quizzes-list-filter-div">
+                                    <div className="div-block-54">
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd53ab37876bc16e0ec576_filter%20(1).png" loading="lazy" alt="" className="image-15"/>
+                                        <div>Filter and search</div>
+                                    </div>
+                                    <div className="form-block-4 w-form">
+                                        <form id="email-form-5" name="email-form-5" data-name="Email Form 5" method="get" className="form-3" data-wf-page-id="68cb608040ea6feccc11acd4" data-wf-element-id="d4025901-f175-1414-5ffc-1ab61453a638" data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e">
+                                            <input className="input profile-questions-search w-input" maxLength={256} name="field-5" data-name="Field 5" placeholder="Example Text" type="text" id="field-5" />
+                                            <select id="field-6" name="field-6" data-name="Field 6" className="filter-select w-select">
+                                                <option value="">Select one...</option>
+                                                <option value="First">First choice</option>
+                                                <option value="Second">Second choice</option>
+                                                <option value="Third">Third choice</option>
+                                            </select>
+                                            <select id="field-6" name="field-6" data-name="Field 6" className="filter-select w-select">
+                                                <option value="">Select one...</option>
+                                                <option value="First">First choice</option>
+                                                <option value="Second">Second choice</option>
+                                                <option value="Third">Third choice</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                    <div className="text-block-41">Showing 6 of 6 results</div>
+                                </div>
+                                <div className="profile-quizzes-list-div">
+                                    <div className="profile-quizzes-div">
+                                        <div className="profile-quizzes-div-header">
+                                            <div className="div-block-56">
+                                                <div className="text-block-42">JavaScript Osnove</div>
+                                                <div className="div-block-64">
+                                                    <div className="div-block-55">
+                                                        <div>
+                                                            Programiranje<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-easy-tag">
+                                                        <div>
+                                                            Easy<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-medium-tag">
+                                                        <div>
+                                                            Medium<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-hard-tag">
+                                                        <div>
+                                                            Hard<br/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="div-block-57">
+                                                <div className="text-block-43">85%</div>
+                                                <div className="text-block-44">85/100 points</div>
+                                            </div>
+                                            <div className="div-block-58">
+                                                <a id="w-node-a8af7073-fcb3-a76e-9ccf-516c869c7086-cc11acd4" className="button-1 profile-quiz-details-button w-button">View details</a>
+                                            </div>
+                                        </div>
+                                        <div className="div-block-60">
+                                            <div className="div-block-61">
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Correct answers</div>
+                                                    <div className="text-block-45">17/20</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Time</div>
+                                                    <div className="text-block-45">17:20</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Date of resolution</div>
+                                                    <div className="text-block-45">17.20.2025</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Points</div>
+                                                    <div className="text-block-45">255</div>
+                                                </div>
+                                            </div>
+                                            <div className="div-block-62">
+                                                <div className="div-block-63"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="profile-quizzes-div">
+                                        <div className="profile-quizzes-div-header">
+                                            <div className="div-block-56">
+                                                <div className="text-block-42">JavaScript Osnove</div>
+                                                <div className="div-block-64">
+                                                    <div className="div-block-55">
+                                                        <div>
+                                                            Programiranje<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-easy-tag">
+                                                        <div>
+                                                            Easy<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-medium-tag">
+                                                        <div>
+                                                            Medium<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-hard-tag">
+                                                        <div>
+                                                            Hard<br/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="div-block-57">
+                                                <div className="text-block-43">85%</div>
+                                                <div className="text-block-44">85/100 points</div>
+                                            </div>
+                                            <div className="div-block-58">
+                                                <a id="w-node-_612f5bd7-3518-a935-6610-9468f81c8b45-cc11acd4" className="button-1 profile-quiz-details-button w-button">View details</a>
+                                            </div>
+                                        </div>
+                                        <div className="div-block-60">
+                                            <div className="div-block-61">
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Correct answers</div>
+                                                    <div className="text-block-45">17/20</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Time</div>
+                                                    <div className="text-block-45">17:20</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Date of resolution</div>
+                                                    <div className="text-block-45">17.20.2025</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Points</div>
+                                                    <div className="text-block-45">255</div>
+                                                </div>
+                                            </div>
+                                            <div className="div-block-62">
+                                                <div className="div-block-63"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="profile-quizzes-div">
+                                        <div className="profile-quizzes-div-header">
+                                            <div className="div-block-56">
+                                                <div className="text-block-42">JavaScript Osnove</div>
+                                                <div className="div-block-64">
+                                                    <div className="div-block-55">
+                                                        <div>
+                                                            Programiranje<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-easy-tag">
+                                                        <div>
+                                                            Easy<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-medium-tag">
+                                                        <div>
+                                                            Medium<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-hard-tag">
+                                                        <div>
+                                                            Hard<br/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="div-block-57">
+                                                <div className="text-block-43">85%</div>
+                                                <div className="text-block-44">85/100 points</div>
+                                            </div>
+                                            <div className="div-block-58">
+                                                <a id="w-node-_20264945-9d70-0295-6e39-cf827d94606b-cc11acd4" className="button-1 profile-quiz-details-button w-button">View details</a>
+                                            </div>
+                                        </div>
+                                        <div className="div-block-60">
+                                            <div className="div-block-61">
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Correct answers</div>
+                                                    <div className="text-block-45">17/20</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Time</div>
+                                                    <div className="text-block-45">17:20</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Date of resolution</div>
+                                                    <div className="text-block-45">17.20.2025</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Points</div>
+                                                    <div className="text-block-45">255</div>
+                                                </div>
+                                            </div>
+                                            <div className="div-block-62">
+                                                <div className="div-block-63"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="profile-quizzes-div">
+                                        <div className="profile-quizzes-div-header">
+                                            <div className="div-block-56">
+                                                <div className="text-block-42">JavaScript Osnove</div>
+                                                <div className="div-block-64">
+                                                    <div className="div-block-55">
+                                                        <div>
+                                                            Programiranje<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-easy-tag">
+                                                        <div>
+                                                            Easy<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-medium-tag">
+                                                        <div>
+                                                            Medium<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-hard-tag">
+                                                        <div>
+                                                            Hard<br/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="div-block-57">
+                                                <div className="text-block-43">85%</div>
+                                                <div className="text-block-44">85/100 points</div>
+                                            </div>
+                                            <div className="div-block-58">
+                                                <a id="w-node-_64c5e955-ff3b-166a-e881-62df3a8ac952-cc11acd4" className="button-1 profile-quiz-details-button w-button">View details</a>
+                                            </div>
+                                        </div>
+                                        <div className="div-block-60">
+                                            <div className="div-block-61">
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Correct answers</div>
+                                                    <div className="text-block-45">17/20</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Time</div>
+                                                    <div className="text-block-45">17:20</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Date of resolution</div>
+                                                    <div className="text-block-45">17.20.2025</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Points</div>
+                                                    <div className="text-block-45">255</div>
+                                                </div>
+                                            </div>
+                                            <div className="div-block-62">
+                                                <div className="div-block-63"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="profile-quizzes-div">
+                                        <div className="profile-quizzes-div-header">
+                                            <div className="div-block-56">
+                                                <div className="text-block-42">JavaScript Osnove</div>
+                                                <div className="div-block-64">
+                                                    <div className="div-block-55">
+                                                        <div>
+                                                            Programiranje<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-easy-tag">
+                                                        <div>
+                                                            Easy<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-medium-tag">
+                                                        <div>
+                                                            Medium<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-hard-tag">
+                                                        <div>
+                                                            Hard<br/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="div-block-57">
+                                                <div className="text-block-43">85%</div>
+                                                <div className="text-block-44">85/100 points</div>
+                                            </div>
+                                            <div className="div-block-58">
+                                                <a id="w-node-dc09e8cd-34c7-be6a-37c7-16f791675e38-cc11acd4" className="button-1 profile-quiz-details-button w-button">View details</a>
+                                            </div>
+                                        </div>
+                                        <div className="div-block-60">
+                                            <div className="div-block-61">
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Correct answers</div>
+                                                    <div className="text-block-45">17/20</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Time</div>
+                                                    <div className="text-block-45">17:20</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Date of resolution</div>
+                                                    <div className="text-block-45">17.20.2025</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Points</div>
+                                                    <div className="text-block-45">255</div>
+                                                </div>
+                                            </div>
+                                            <div className="div-block-62">
+                                                <div className="div-block-63"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="profile-quizzes-div">
+                                        <div className="profile-quizzes-div-header">
+                                            <div className="div-block-56">
+                                                <div className="text-block-42">JavaScript Osnove</div>
+                                                <div className="div-block-64">
+                                                    <div className="div-block-55">
+                                                        <div>
+                                                            Programiranje<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-easy-tag">
+                                                        <div>
+                                                            Easy<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-medium-tag">
+                                                        <div>
+                                                            Medium<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-hard-tag">
+                                                        <div>
+                                                            Hard<br/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="div-block-57">
+                                                <div className="text-block-43">85%</div>
+                                                <div className="text-block-44">85/100 points</div>
+                                            </div>
+                                            <div className="div-block-58">
+                                                <a id="w-node-_938dbdce-1b74-252b-d4b0-28273984f061-cc11acd4" className="button-1 profile-quiz-details-button w-button">View details</a>
+                                            </div>
+                                        </div>
+                                        <div className="div-block-60">
+                                            <div className="div-block-61">
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Correct answers</div>
+                                                    <div className="text-block-45">17/20</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Time</div>
+                                                    <div className="text-block-45">17:20</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Date of resolution</div>
+                                                    <div className="text-block-45">17.20.2025</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Points</div>
+                                                    <div className="text-block-45">255</div>
+                                                </div>
+                                            </div>
+                                            <div className="div-block-62">
+                                                <div className="div-block-63"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="profile-quizzes-div">
+                                        <div className="profile-quizzes-div-header">
+                                            <div className="div-block-56">
+                                                <div className="text-block-42">JavaScript Osnove</div>
+                                                <div className="div-block-64">
+                                                    <div className="div-block-55">
+                                                        <div>
+                                                            Programiranje<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-easy-tag">
+                                                        <div>
+                                                            Easy<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-medium-tag">
+                                                        <div>
+                                                            Medium<br/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-55 profile-quizzes-hard-tag">
+                                                        <div>
+                                                            Hard<br/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="div-block-57">
+                                                <div className="text-block-43">85%</div>
+                                                <div className="text-block-44">85/100 points</div>
+                                            </div>
+                                            <div className="div-block-58">
+                                                <a id="w-node-_1cc73403-0246-3e17-3ff6-a630d5af6ef9-cc11acd4" className="button-1 profile-quiz-details-button w-button">View details</a>
+                                            </div>
+                                        </div>
+                                        <div className="div-block-60">
+                                            <div className="div-block-61">
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Correct answers</div>
+                                                    <div className="text-block-45">17/20</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Time</div>
+                                                    <div className="text-block-45">17:20</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Date of resolution</div>
+                                                    <div className="text-block-45">17.20.2025</div>
+                                                </div>
+                                                <div className="div-block-59">
+                                                    <div className="text-block-46">Points</div>
+                                                    <div className="text-block-45">255</div>
+                                                </div>
+                                            </div>
+                                            <div className="div-block-62">
+                                                <div className="div-block-63"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="quiz-detalis-section">
+                    <div className="container">
+                        <div className="quiz-detalis-wrapper">
+                            <div className="quiz-detalis-div">
+                                <div className="quiz-detalis-header">
+                                    <div className="text-block-47">JavaScript Osnove</div>
+                                    <div className="text-block-48">
+                                        Osnovni koncepti JavaScript programskog jezika<br/>
+                                    </div>
+                                    <div className="div-block-73">
+                                        <div className="div-block-66">
+                                            <div>Programiranje</div>
+                                        </div>
+                                        <div className="div-block-66 medium-tag">
+                                            <div>Programiranje</div>
+                                        </div>
+                                        <div className="div-block-66 easy-tag">
+                                            <div>Programiranje</div>
+                                        </div>
+                                        <div className="div-block-66 hard-tag">
+                                            <div>Programiranje</div>
+                                        </div>
+                                    </div>
+                                    <div className="div-block-77">
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d34c121983c037fef791d1_close.png" loading="lazy" alt=""/>
+                                    </div>
+                                </div>
+                                <div className="quiz-detalis-main-div">
+                                    <div className="quiz-detalis-filter">
+                                        <div className="quiz-detalis-filter-div quiz-detalis-filter-div-select">
+                                            <div>Questions and answers</div>
+                                        </div>
+                                        <div className="quiz-detalis-filter-div">
+                                            <div>Progress</div>
+                                        </div>
+                                    </div>
+                                    <div className="quiz-detalis-list-questions">
+                                        <div className="quiz-detalis-question-div">
+                                            <div className="quiz-detalis-question-header">
+                                                <div className="div-block-67">
+                                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2e5c22d15bebcf2d7c206_check.png" loading="lazy" alt="" className="image-16"/>
+                                                    <div>Pitanje 1</div>
+                                                </div>
+                                                <div className="div-block-70">
+                                                    <div className="div-block-68">
+                                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2d58daa34f65f1564e909_back-in-time.png" loading="lazy" alt="" className="image-17"/>
+                                                        <div>1:51</div>
+                                                    </div>
+                                                    <div className="div-block-69">
+                                                        <div>5/5 points</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="div-block-71">
+                                                <div>Question:</div>
+                                                <div>JavaScript je interpretiran programski jezik.</div>
+                                            </div>
+                                            <div className="quiz-detalis-answers-list">
+                                                <div className="quiz-detalis-answer-div">
+                                                    <div>Option A</div>
+                                                </div>
+                                                <div className="quiz-detalis-answer-div">
+                                                    <div>Option A</div>
+                                                </div>
+                                                <div className="quiz-detalis-answer-div quiz-detalis-answer-div-correct">
+                                                    <div>Option A</div>
+                                                    <div className="div-block-72">
+                                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2e5c22d15bebcf2d7c206_check.png" loading="lazy" alt="" className="image-18"/>
+                                                        <div>Your answer</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="quiz-detalis-question-div">
+                                            <div className="quiz-detalis-question-header">
+                                                <div className="div-block-67">
+                                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d3469a0f1a8074580fa1df_multiply.png" loading="lazy" alt="" className="image-16"/>
+                                                    <div>Pitanje 1</div>
+                                                </div>
+                                                <div className="div-block-70">
+                                                    <div className="div-block-68">
+                                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2d58daa34f65f1564e909_back-in-time.png" loading="lazy" alt="" className="image-17"/>
+                                                        <div>1:51</div>
+                                                    </div>
+                                                    <div className="div-block-69">
+                                                        <div>0/5 points</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="div-block-71">
+                                                <div>Question:</div>
+                                                <div>JavaScript je interpretiran programski jezik.</div>
+                                            </div>
+                                            <div className="quiz-detalis-answers-list">
+                                                <div className="quiz-detalis-answer-div">
+                                                    <div>Option A</div>
+                                                </div>
+                                                <div className="quiz-detalis-answer-div quiz-detalis-answer-div-wrong">
+                                                    <div>Option A</div>
+                                                    <div className="div-block-72">
+                                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d3469a0f1a8074580fa1df_multiply.png" loading="lazy" alt="" className="image-18"/>
+                                                        <div>Your answer</div>
+                                                    </div>
+                                                </div>
+                                                <div className="quiz-detalis-answer-div quiz-detalis-answer-div-correct">
+                                                    <div>Option A</div>
+                                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2e5c22d15bebcf2d7c206_check.png" loading="lazy" alt="" className="image-18"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="quiz-detalis-progress-block">
+                                        <div className="quiz-detalis-progress-graph-block">
+                                            <div className="text-block-50">Progress chart</div>
+                                            <div className="text-block-49">Your results through attempts</div>
+                                            <div className="quiz-detalis-progress-graph-div"></div>
+                                        </div>
+                                        <div className="quiz-detalis-progress-attempts-block">
+                                            <div className="text-block-51">History of attempts</div>
+                                            <div className="quiz-detalis-progress-attempts-list">
+                                                <div className="quiz-detalis-progress-attempt-div">
+                                                    <div className="div-block-75">
+                                                        <div className="div-block-74">
+                                                            <div className="text-block-52">1</div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="text-block-54">Attempt 1</div>
+                                                            <div className="text-block-53">20.09.2025</div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-76">
+                                                        <div className="text-block-55">85%</div>
+                                                        <div className="text-block-56">12:47</div>
+                                                    </div>
+                                                </div>
+                                                <div className="quiz-detalis-progress-attempt-div">
+                                                    <div className="div-block-75">
+                                                        <div className="div-block-74">
+                                                            <div className="text-block-52">1</div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="text-block-54">Attempt 1</div>
+                                                            <div className="text-block-53">20.09.2025</div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-76">
+                                                        <div className="text-block-55">85%</div>
+                                                        <div className="text-block-56">12:47</div>
+                                                    </div>
+                                                </div>
+                                                <div className="quiz-detalis-progress-attempt-div">
+                                                    <div className="div-block-75">
+                                                        <div className="div-block-74">
+                                                            <div className="text-block-52">1</div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="text-block-54">Attempt 1</div>
+                                                            <div className="text-block-53">20.09.2025</div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-76">
+                                                        <div className="text-block-55">85%</div>
+                                                        <div className="text-block-56">12:47</div>
+                                                    </div>
+                                                </div>
+                                                <div className="quiz-detalis-progress-attempt-div">
+                                                    <div className="div-block-75">
+                                                        <div className="div-block-74">
+                                                            <div className="text-block-52">1</div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="text-block-54">Attempt 1</div>
+                                                            <div className="text-block-53">20.09.2025</div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-76">
+                                                        <div className="text-block-55">85%</div>
+                                                        <div className="text-block-56">12:47</div>
+                                                    </div>
+                                                </div>
+                                                <div className="quiz-detalis-progress-attempt-div">
+                                                    <div className="div-block-75">
+                                                        <div className="div-block-74">
+                                                            <div className="text-block-52">1</div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="text-block-54">Attempt 1</div>
+                                                            <div className="text-block-53">20.09.2025</div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-76">
+                                                        <div className="text-block-55">85%</div>
+                                                        <div className="text-block-56">12:47</div>
+                                                    </div>
+                                                </div>
+                                                <div className="quiz-detalis-progress-attempt-div">
+                                                    <div className="div-block-75">
+                                                        <div className="div-block-74">
+                                                            <div className="text-block-52">1</div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="text-block-54">Attempt 1</div>
+                                                            <div className="text-block-53">20.09.2025</div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-76">
+                                                        <div className="text-block-55">85%</div>
+                                                        <div className="text-block-56">12:47</div>
+                                                    </div>
+                                                </div>
+                                                <div className="quiz-detalis-progress-attempt-div">
+                                                    <div className="div-block-75">
+                                                        <div className="div-block-74">
+                                                            <div className="text-block-52">1</div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="text-block-54">Attempt 1</div>
+                                                            <div className="text-block-53">20.09.2025</div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-76">
+                                                        <div className="text-block-55">85%</div>
+                                                        <div className="text-block-56">12:47</div>
+                                                    </div>
+                                                </div>
+                                                <div className="quiz-detalis-progress-attempt-div">
+                                                    <div className="div-block-75">
+                                                        <div className="div-block-74">
+                                                            <div className="text-block-52">1</div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="text-block-54">Attempt 1</div>
+                                                            <div className="text-block-53">20.09.2025</div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-76">
+                                                        <div className="text-block-55">85%</div>
+                                                        <div className="text-block-56">12:47</div>
+                                                    </div>
+                                                </div>
+                                                <div className="quiz-detalis-progress-attempt-div">
+                                                    <div className="div-block-75">
+                                                        <div className="div-block-74">
+                                                            <div className="text-block-52">1</div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="text-block-54">Attempt 1</div>
+                                                            <div className="text-block-53">20.09.2025</div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-76">
+                                                        <div className="text-block-55">85%</div>
+                                                        <div className="text-block-56">12:47</div>
+                                                    </div>
+                                                </div>
+                                                <div className="quiz-detalis-progress-attempt-div">
+                                                    <div className="div-block-75">
+                                                        <div className="div-block-74">
+                                                            <div className="text-block-52">1</div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="text-block-54">Attempt 1</div>
+                                                            <div className="text-block-53">20.09.2025</div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-76">
+                                                        <div className="text-block-55">85%</div>
+                                                        <div className="text-block-56">12:47</div>
+                                                    </div>
+                                                </div>
+                                                <div className="quiz-detalis-progress-attempt-div">
+                                                    <div className="div-block-75">
+                                                        <div className="div-block-74">
+                                                            <div className="text-block-52">1</div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="text-block-54">Attempt 1</div>
+                                                            <div className="text-block-53">20.09.2025</div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="div-block-76">
+                                                        <div className="text-block-55">85%</div>
+                                                        <div className="text-block-56">12:47</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="admin-section">
+                    <div className="w-layout-blockcontainer container w-container">
+                        <div className="admin-wrapper">
+                            <div className="admin-header">
+                                <div>
+                                    <div className="text-block-57">Admin panel</div>
+                                    <div className="text-block-58">Manage quizzes, users, and system settings</div>
+                                </div>
+                                <div className="div-block-82">
+                                    <div className="button-1 admin-panel-add-quiz">
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d3f0f93fa447cc52c6037a_plus.png" loading="lazy" alt="" className="image-21"/>
+                                        <div>Add new quiz</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="div-block-53">
+                                <div className="div-block-52 admin-panel-header-div">
+                                    <div className="div-block-51">
+                                        <div className="text-block-38">Total quizzes</div>
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2efd247db02516582147c_task.png" loading="lazy" alt="" className="image-14"/>
+                                    </div>
+                                    <div>
+                                        <div className="text-block-40">6</div>
+                                        <div className="text-block-39">Active</div>
+                                    </div>
+                                </div>
+                                <div className="div-block-52">
+                                    <div className="div-block-51">
+                                        <div className="text-block-38">Registered users</div>
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2efd23a88713d1aaccd63_rise.png" loading="lazy" alt="" className="image-14"/>
+                                    </div>
+                                    <div>
+                                        <div className="text-block-40">6</div>
+                                        <div className="text-block-39">Users</div>
+                                    </div>
+                                </div>
+                                <div className="div-block-52">
+                                    <div className="div-block-51">
+                                        <div className="text-block-38">Total participation</div>
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2efd24fd388226c45a79b_exam.png" loading="lazy" alt="" className="image-14"/>
+                                    </div>
+                                    <div>
+                                        <div className="text-block-40">6</div>
+                                        <div className="text-block-39">Participation</div>
+                                    </div>
+                                </div>
+                                <div className="div-block-52">
+                                    <div className="div-block-51">
+                                        <div className="text-block-38">Average score</div>
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d2e570f75fe458a72de339_coin%20(1).png" loading="lazy" alt="" className="image-14"/>
+                                    </div>
+                                    <div>
+                                        <div className="text-block-40">6</div>
+                                        <div className="text-block-39">Performance</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="div-block-78">
+                                <div className="admin-panel-filter-div">
+                                    <div className="admin-panel-filter admin-panel-filter-selected">
+                                        <div>Quizzes</div>
+                                    </div>
+                                    <div className="admin-panel-filter">
+                                        <div>Users</div>
+                                    </div>
+                                    <div className="admin-panel-filter">
+                                        <div>Analytics</div>
+                                    </div>
+                                </div>
+                                <div className="admin-panel-main-view">
+                                    <div className="admin-panel-quizzes-block">
+                                        <div className="admin-panel-quizzes-header">
+                                            <div className="text-block-59">Quiz management</div>
+                                            <div className="text-block-60">View, edit, and delete existing quizzes</div>
+                                        </div>
+                                        <div className="admin-panel-quizzes-list">
+                                            <div className="admin-panel-list-entity-div">
+                                                <div className="admin-panel-quiz-info">
+                                                    <div className="admin-panel-quiz-header">
+                                                        <div className="div-block-80">
+                                                            <div className="text-block-61">JavaScript Osnove</div>
+                                                            <div className="div-block-79">
+                                                                <div>Programiranje</div>
+                                                            </div>
+                                                            <div className="div-block-79 easy-tag">
+                                                                <div>Easy</div>
+                                                            </div>
+                                                            <div className="div-block-79 medium-tag">
+                                                                <div>Medium</div>
+                                                            </div>
+                                                            <div className="div-block-79 hard-tag">
+                                                                <div>Hard</div>
+                                                            </div>
+                                                            <div className="div-block-79 active-tag">
+                                                                <div>Active</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="text-block-62">
+                                                        Osnovni koncepti JavaScript programskog jezika<br/>
+                                                    </div>
+                                                    <div className="admin-panel-quiz-bottom">
+                                                        <div className="div-block-81">
+                                                            <div className="text-block-63">20 questions </div>
+                                                            <div className="text-block-63">15 min</div>
+                                                            <div className="text-block-63">100 patritions </div>
+                                                            <div className="text-block-63">Average score 78%</div>
+                                                            <div className="text-block-63">Created 10.01.2025</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="admin-panel-buttons-div">
+                                                    <div className="admin-panel-button-div">
+                                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d3ed544e5182a6d87118ae_edit%20(1).png" loading="lazy" alt="" className="image-20"/>
+                                                    </div>
+                                                    <div className="admin-panel-button-div">
+                                                        <div>Deactivate</div>
+                                                    </div>
+                                                    <div className="admin-panel-button-div remove-bg">
+                                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d3eeafaf19659c0c32d110_bin.png" loading="lazy" alt="" className="image-20"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="admin-panel-users-list">
+                                        <div className="admin-panel-list-entity-div">
+                                            <div className="div-block-84">
+                                                <div className="admin-panel-user-header">
+                                                    <div className="text-block-64">Srdjan Delic</div>
+                                                    <div className="admin-panel-user-active-tag">Active</div>
+                                                </div>
+                                                <div className="div-block-83">
+                                                    <div className="text-block-66">@srga</div>
+                                                </div>
+                                                <div>
+                                                    <div className="text-block-65">srdjandelic02@gmail.com</div>
+                                                </div>
+                                                <div className="div-block-81">
+                                                    <div className="text-block-63">20 quizzes </div>
+                                                    <div className="text-block-63">Total points: 15</div>
+                                                    <div className="text-block-63">Average score: 78%</div>
+                                                    <div className="text-block-63">Created: 10.01.2025</div>
+                                                </div>
+                                            </div>
+                                            <div className="admin-panel-buttons-div">
+                                                <div className="admin-panel-button-div">
+                                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d3ed544e5182a6d87118ae_edit%20(1).png" loading="lazy" alt="" className="image-20"/>
+                                                </div>
+                                                <div className="admin-panel-button-div">
+                                                    <div>Deactivate</div>
+                                                </div>
+                                                <div className="admin-panel-button-div remove-bg">
+                                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d3eeafaf19659c0c32d110_bin.png" loading="lazy" alt="" className="image-20"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="add-quiz-section">
+                    <div className="w-layout-blockcontainer container w-container">
+                        <div className="add-quiz-wrapper">
+                            <div className="aq-header">
+                                <div>
+                                    <div className="text-block-67">Creating a new quiz</div>
+                                    <div className="text-block-68">Add basic information and quiz questions</div>
+                                </div>
+                                <div className="div-block-85">
+                                    <div className="button-1 cancel-btn">
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d3fe7c2641ab3afd7bbc67_close%20(1).png" loading="lazy" alt="" className="image-22"/>
+                                        <div>Cancel</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="div-block-86">
+                                <div className="aq-div">
+                                    <div className="text-block-69">Basic information</div>
+                                    <div className="w-form">
+                                        <form id="email-form-6" name="email-form-6" data-name="Email Form 6" method="get" data-wf-page-id="68cb608040ea6feccc11acd4" data-wf-element-id="5a36b320-6564-5d2f-e477-2a54dc22de8f" data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e">
+                                            <label htmlFor="name" className="label">Name</label>
+                                            <input className="input aq-input w-input" maxLength={256} name="name-2" data-name="Name 2" placeholder="" type="text" id="name-2"/>
+                                            <label htmlFor="field-9" className="label">Description</label>
+                                            <textarea placeholder="Example Text" maxLength={5000} id="field-9" name="field-9" data-name="Field 9" className="input aq-input a1-text-box w-input"></textarea>
+                                            <div className="div-block-88">
+                                                <label htmlFor="field-8" className="label">Category</label>
+                                                <label className="w-checkbox">
+                                                    <input type="checkbox" name="new-category" id="new-category" data-name="new-category" className="w-checkbox-input checkbox"/>
+                                                    <span className="w-form-label" htmlFor="new-category">New Category</span>
+                                                </label>
+                                                <select id="field-7" name="field-7" data-name="Field 7" className="filter-select aq-input w-node-_68a60f91-9d00-a295-cb61-99b932c744e0-cc11acd4 w-select">
+                                                    <option value="">Select one...</option>
+                                                    <option value="First">First choice</option>
+                                                    <option value="Second">Second choice</option>
+                                                    <option value="Third">Third choice</option>
+                                                </select>
+                                                <input className="input aq-input aq-input-disabled w-node-bad3eef2-ead3-571f-20f8-2ddd09a873cf-cc11acd4 w-input" maxLength={256} name="name-2" data-name="Name 2" placeholder="" type="text" id="name-2"/>
+                                            </div>
+                                            <label htmlFor="field-7" className="label">Difficulty</label>
+                                            <select id="field-7" name="field-7" data-name="Field 7" className="filter-select aq-input w-select">
+                                                <option value="">Select one...</option>
+                                                <option value="First">First choice</option>
+                                                <option value="Second">Second choice</option>
+                                                <option value="Third">Third choice</option>
+                                            </select>
+                                            <label htmlFor="name" className="label">Time limit</label>
+                                            <input className="input aq-input w-input" maxLength={256} name="name-2" data-name="Name 2" placeholder="" type="text" id="name-2"/>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div className="aq-div">
+                                    <div>
+                                        <div className="text-block-69">Quiz details</div>
+                                    </div>
+                                    <div className="div-block-93">
+                                        <div className="div-block-92">
+                                            <div>Question number</div>
+                                            <div>10</div>
+                                        </div>
+                                        <div className="div-block-92">
+                                            <div>Total points</div>
+                                            <div>10</div>
+                                        </div>
+                                        <div className="div-block-92">
+                                            <div>Time</div>
+                                            <div>10 min</div>
+                                        </div>
+                                    </div>
+                                    <div className="button-1 aq-add-quiz-btn">
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d40c77110b83c179010b8f_diskette.png" loading="lazy" alt="" className="image-24"/>
+                                        <div>Save quiz</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="aq-questions-list">
+                                <div className="aq-question-div aq-div">
+                                    <div className="aq-question-header">
+                                        <div className="text-block-69">Add question</div>
+                                    </div>
+                                    <div className="w-form">
+                                        <form id="email-form-7" name="email-form-7" data-name="Email Form 7" method="get" className="form-4" data-wf-page-id="68cb608040ea6feccc11acd4" data-wf-element-id="624bfac0-ead1-967a-e57d-66fe52bd5bce" data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e">
+                                            <div className="div-block-89">
+                                                <label htmlFor="field-10" className="aq-question-label">Form Label</label>
+                                                <label htmlFor="field-11" className="aq-question-label">Points</label>
+                                                <select id="field-11" name="field-11" data-name="Field 11" className="filter-select aq-question-select w-node-_54d10e76-1d21-d0de-95b7-937912f7b55c-cc11acd4 w-select">
+                                                    <option value="">Select one...</option>
+                                                    <option value="First">First choice</option>
+                                                    <option value="Second">Second choice</option>
+                                                    <option value="Third">Third choice</option>
+                                                </select>
+                                                <input className="input aq-question-input w-node-bb39f289-9129-2446-f736-a898cfd9a1aa-cc11acd4 w-input" maxLength={256} name="field-10" data-name="Field 10" placeholder="Example Text" type="number" id="field-10" />
+                                            </div>
+                                            <div>
+                                                <label htmlFor="field-12" className="aq-question-label">Question text</label>
+                                                <textarea placeholder="Example Text" maxLength={5000} id="field-12" name="field-12" data-name="Field 12" className="input aq-question-textarea w-input"></textarea>
+                                            </div>
+                                            <div className="aq-question-one-answer-div">
+                                                <div>Question answer options</div>
+                                                <div className="div-block-90">
+                                                    <div className="div-block-91">
+                                                        <label htmlFor="field-10" className="aq-question-label">Correct answer</label>
+                                                        <input className="input aq-question-input w-node-ff25aea5-a445-0923-badb-589e3a79c088-cc11acd4 w-input" maxLength={256} name="field-10" data-name="Field 10" placeholder="Example Text" type="text" id="field-10" />
+                                                    </div>
+                                                    <div className="div-block-91">
+                                                        <label htmlFor="field-10" className="aq-question-label">
+                                                            Other answers <span className="text-span">(wrong)</span>
+                                                        </label>
+                                                        <input className="input aq-question-input w-node-_3db8b66c-824a-593c-7f30-fd87d25b6fa7-cc11acd4 w-input" maxLength={256} name="field-10" data-name="Field 10" placeholder="Example Text" type="text" id="field-10" />
+                                                        <input className="input aq-question-input w-node-_53f3d45b-fab1-1740-a38d-a5874ac4506b-cc11acd4 w-input" maxLength={256} name="field-10" data-name="Field 10" placeholder="Example Text" type="text" id="field-10" />
+                                                        <a className="button-1 aq-question-new-answer w-button">Add new answer</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="aq-question-one-or-more-answer-div">
+                                                <div>Question answer options</div>
+                                                <div className="div-block-90">
+                                                    <div className="div-block-91">
+                                                        <label htmlFor="field-10" className="aq-question-label">Correct answer</label>
+                                                        <input className="input aq-question-input w-node-_95c5698d-37c1-e66f-aa86-9f522d6bddb7-cc11acd4 w-input" maxLength={256} name="field-10" data-name="Field 10" placeholder="Example Text" type="text" id="field-10" />
+                                                        <a className="button-1 aq-question-new-answer w-button">Add new correct answer</a>
+                                                    </div>
+                                                    <div className="div-block-91">
+                                                        <label htmlFor="field-10" className="aq-question-label">
+                                                            Other answers <span className="text-span">(wrong)</span>
+                                                        </label>
+                                                        <input className="input aq-question-input w-node-_95c5698d-37c1-e66f-aa86-9f522d6bddbd-cc11acd4 w-input" maxLength={256} name="field-10" data-name="Field 10" placeholder="Example Text" type="text" id="field-10" />
+                                                        <input className="input aq-question-input w-node-_95c5698d-37c1-e66f-aa86-9f522d6bddbe-cc11acd4 w-input" maxLength={256} name="field-10" data-name="Field 10" placeholder="Example Text" type="text" id="field-10" />
+                                                        <a className="button-1 aq-question-new-answer w-button">Add new answer</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="aq-questioni-nput-text-answer">
+                                                <div>Question answer options</div>
+                                                <div className="div-block-90 text-answer">
+                                                    <div className="div-block-91">
+                                                        <label htmlFor="field-10" className="aq-question-label">Correct answer</label>
+                                                        <input className="input aq-question-input w-node-_7f0d833d-b7b5-9290-ea71-8f6e5dfb2729-cc11acd4 w-input" maxLength={256} name="field-10" data-name="Field 10" placeholder="Example Text" type="text" id="field-10" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="aq-questions-true-or-false">
+                                                <div>Question answer options</div>
+                                                <div className="div-block-90">
+                                                    <div className="div-block-91">
+                                                        <label htmlFor="field-10" className="aq-question-label">
+                                                            Correct answer <span className="text-span">(default)</span>
+                                                        </label>
+                                                        <input className="input aq-question-input aq-question-answer-default w-node-_63738b5c-f96d-be7a-e0db-48b481abdc1c-cc11acd4 w-input" maxLength={256} name="field-10" data-name="Field 10" placeholder="True" type="text" id="field-10" />
+                                                    </div>
+                                                    <div className="div-block-91">
+                                                        <label htmlFor="field-10" className="aq-question-label">
+                                                            Other answers <span className="text-span">(wrong, default)</span>
+                                                        </label>
+                                                        <input className="input aq-question-input aq-question-answer-default w-node-_63738b5c-f96d-be7a-e0db-48b481abdc24-cc11acd4 w-input" maxLength={256} name="field-10" data-name="Field 10" placeholder="False" type="text" id="field-10" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div className="button-1 aq-add-question">
+                                        <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68d3f0f93fa447cc52c6037a_plus.png" loading="lazy" alt="" className="image-23"/>
+                                        <div>Add question</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+        <section className="login-section">
+            <div className="w-layout-blockcontainer container w-container">
+                <div className="login-wrapper">
+                    <div className="div-block-5">
+                        <div className="div-block-4">
+                            <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb653b6fef412761d4ca6b_crown.png" loading="lazy" alt="" className="image-4"/>
+                            <div className="text-block-3">QuizHub</div>
+                        </div>
+                        <div className="text-block-4">Test your knowledge through fun quizzes</div>
+                    </div>
+                    <div className="form-block w-form">
+                        <div className="text-block-5">Welcome back!</div>
+                        <form id="email-form" name="email-form" data-name="Email Form" method="get" className="form" data-wf-page-id="68cb608040ea6feccc11acd4" data-wf-element-id="9c03e398-0a33-436d-f279-090774080f0b" data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e">
+                            <label htmlFor="field" className="label">Username/email</label>
+                            <input className="input login-input w-input" maxLength={256} name="field" data-name="Field" placeholder="Enter your username/email" type="text" id="field" />
+                            <label htmlFor="field" className="label">Password</label>
+                            <input className="input login-input w-input" maxLength={256} name="field" data-name="Field" placeholder="Enter your password" type="password" id="field" />
+                            <input type="submit" data-wait="Please wait..." className="button-1 w-button" value="Login"/>
+                        </form>
+                        <div className="div-block-6">
+                            <div>Don &#x27;t have account?</div>
+                            <a className="link">Sign up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section className="register-section">
+            <div className="w-layout-blockcontainer container w-container">
+                <div className="register-wrapper">
+                    <div className="div-block-5">
+                        <div className="div-block-4">
+                            <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb653b6fef412761d4ca6b_crown.png" loading="lazy" alt="" className="image-4"/>
+                            <div className="text-block-3">QuizHub</div>
+                        </div>
+                        <div className="text-block-4">Test your knowledge through fun quizzes</div>
+                    </div>
+                    <div className="form-block w-form">
+                        <form id="email-form" name="email-form" data-name="Email Form" method="get" className="form" data-wf-page-id="68cb608040ea6feccc11acd4" data-wf-element-id="836467b0-99f6-509e-6ff2-1aad3ca61849" data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e">
+                            <div className="text-block-5">Welcome!</div>
+                            <label htmlFor="field" className="label">Username</label>
+                            <input className="input login-input w-input" maxLength={256} name="field" data-name="Field" placeholder="Enter your username" type="text" id="field" />
+                            <label htmlFor="field" className="label">Email</label>
+                            <input className="input login-input w-input" maxLength={256} name="field" data-name="Field" placeholder="Enter your email" type="email" id="field" />
+                            <label htmlFor="field" className="label">Password</label>
+                            <input className="input login-input w-input" maxLength={256} name="field" data-name="Field" placeholder="Enter your password" type="password" id="field" />
+                            <label htmlFor="field" className="label">Repeat Password</label>
+                            <input className="input login-input w-input" maxLength={256} name="field" data-name="Field" placeholder="Repeat your password" type="password" id="field" />
+                            <input type="submit" data-wait="Please wait..." className="button-1 w-button" value="Register"/>
+                        </form>
+                        <div className="div-block-6">
+                            <div>Already have account?</div>
+                            <a className="link">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=68cb607f40ea6feccc11acb9" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/js/webflow.a0aa6ca1.4aaf0738f166d3e2.js" type="text/javascript"></script>
+    </body>
+</html>
