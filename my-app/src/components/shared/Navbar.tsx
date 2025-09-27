@@ -1,7 +1,11 @@
 import React from "react";
 import { Link, Links, NavLink } from "react-router-dom";
+import { useAuth } from "../Auth/AuthProvider";
 
 const Navbar: React.FC = () => {
+
+    const { user, logout } = useAuth();
+
     return (
         <nav className="navbar-section">
             <div className="w-layout-blockcontainer container nav-container w-container">
@@ -37,17 +41,19 @@ const Navbar: React.FC = () => {
                             <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb6853c05c947223299e91_home.png" loading="lazy" alt="" className="image-3" />
                             <div>Profile</div>
                         </NavLink>
-                        <NavLink to="/admin/settings" style={{ textDecoration: "none", color: "inherit" }} className={({ isActive }) => isActive ? "nav-page-div nav-page-div-select" : "nav-page-div"}>
-                            <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb6853c05c947223299e91_home.png" loading="lazy" alt="" className="image-3" />
-                            <div>Settings</div>
-                        </NavLink>
+                        {user?.role === "admin" && (
+                            <NavLink to="/admin/settings" style={{ textDecoration: "none", color: "inherit" }} className={({ isActive }) => isActive ? "nav-page-div nav-page-div-select" : "nav-page-div"}>
+                                <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cb6853c05c947223299e91_home.png" loading="lazy" alt="" className="image-3" />
+                                <div>Settings</div>
+                            </NavLink>
+                        )}
                     </div>
 
                     <div className="div-block-3"></div>
 
                     <div className="div-block-7">
                         <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68ccac9159cb7c28073f3df3_exit.png" loading="lazy" alt="" className="image-5" />
-                        <div className="text-block-6">Logout</div>
+                        <div className="text-block-6" onClick={logout}>Logout</div>
                     </div>
 
                 </div>

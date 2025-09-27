@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using QuizService.Aplication.Interfaces.Repositories;
 using QuizService.Infrastructure.Repositories;
 using Microsoft.OpenApi.Models;
+using QuizService.Aplication.Interfaces.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,11 +36,15 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "QuizService API", Version = "v1" });
 });
 
+builder.Services.AddHttpContextAccessor();
+
 builder.Services.Configure<JwtOptionsDTO>(builder.Configuration.GetSection("Jwt"));
 builder.Services.AddSingleton<IJwtGenerator, JwtGenerator>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserReposotory, UserRepository>();
-
+builder.Services.AddScoped<IQuizService, QuizService.Aplication.Services.QuizService>();
+builder.Services.AddScoped<IQuizReposotory, QuizRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

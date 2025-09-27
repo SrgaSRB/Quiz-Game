@@ -8,7 +8,7 @@ export const api = axios.create({
 
 // Jednostavan interceptor: token iz localStorage (ako postoji)
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token"); // ili iz AuthProvider-a, po potrebi
+  const token = localStorage.getItem("authToken"); 
   if (token) {
     config.headers = config.headers ?? {};
     config.headers.Authorization = `Bearer ${token}`;

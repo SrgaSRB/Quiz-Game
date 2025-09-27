@@ -8,14 +8,14 @@ import { AuthProvider } from './components/Auth/AuthProvider';
 import { RequireAuth } from './components/Auth/RequireAuth';
 import RootLayout from './layouts/RootLayout';
 import UserLayout from './layouts/UserLayout';
-import RangListPage from './components/user/RangListPage';
+import RangListPage from './components/user/rank list/RangListPage';
 import QuizzesPage from './components/user/QuizzesPage';
 import QuizPage from './components/user/QuizPage';
 import QuizDetailsView from './components/user/QuizDetalisView';
 import FinishQuizPage from './components/user/FinishQuizPage';
 import ProfilePage from './components/user/ProfilePage';
-import AdminPage from './components/admin/AdminPage';
-import AddQuizPage from './components/admin/AddQuizPage';
+import AdminPage from './components/admin/admin panel/AdminPage';
+import AddQuizPage from './components/admin/add quiz/AddQuizPage';
 import AdminLayout from './layouts/AdminLayout';
 import { RequireRole } from './components/Auth/RequireRole';
 
