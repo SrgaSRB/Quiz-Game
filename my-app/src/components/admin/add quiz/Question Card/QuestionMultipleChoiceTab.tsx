@@ -1,5 +1,5 @@
 import React from "react";
-import { Question, Answer } from "../../../../models/quiz";
+import { Question, Answer } from "../../../../models";
 
 interface QuestionMultipleChoiceTabProps {
     question: Question;
@@ -55,7 +55,7 @@ const QuestionMultipleChoiceTab: React.FC<QuestionMultipleChoiceTabProps> = ({
 
     // Func for delete answer
     const handleDeleteAnswer = (answerIndex: number) => {
-        const updatedAnswers = question.answers.filter((_, i) => i !== answerIndex);
+        const updatedAnswers = question.answers.filter((_: Answer, i: number) => i !== answerIndex);
         const updatedQuestion = {
             ...question,
             answers: updatedAnswers
@@ -63,8 +63,8 @@ const QuestionMultipleChoiceTab: React.FC<QuestionMultipleChoiceTabProps> = ({
         onUpdateQuestion(updatedQuestion);
     };
 
-    const correctAnswers = question.answers.filter(answer => answer.isCorrect);
-    const wrongAnswers = question.answers.filter(answer => !answer.isCorrect);
+    const correctAnswers = question.answers.filter((answer: Answer) => answer.isCorrect);
+    const wrongAnswers = question.answers.filter((answer: Answer) => !answer.isCorrect);
 
     return (
         <div className="aq-question-one-or-more-answer-div">
@@ -75,8 +75,8 @@ const QuestionMultipleChoiceTab: React.FC<QuestionMultipleChoiceTabProps> = ({
                 <div className="div-block-91">
                     <label className="aq-question-label">Correct answer</label>
 
-                    {correctAnswers.map((answer, index) => {
-                        const correctIndex = question.answers.findIndex(a => a === answer);
+                    {correctAnswers.map((answer: Answer, index: number) => {
+                        const correctIndex = question.answers.findIndex((a: Answer) => a === answer);
                         return (
                             <div key={correctIndex}>
                                 <div className="div-block-96">
@@ -110,8 +110,8 @@ const QuestionMultipleChoiceTab: React.FC<QuestionMultipleChoiceTabProps> = ({
                         Other answers <span className="text-span">(incorrect)</span>
                     </label>
 
-                    {wrongAnswers.map((answer, index) => {
-                        const wrongIndex = question.answers.findIndex(a => a === answer);
+                    {wrongAnswers.map((answer: Answer, index: number) => {
+                        const wrongIndex = question.answers.findIndex((a: Answer) => a === answer);
                         return (
                             <div key={wrongIndex} >
                                 <div className="div-block-96">

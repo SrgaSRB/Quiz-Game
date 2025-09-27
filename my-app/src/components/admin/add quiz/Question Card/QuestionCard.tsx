@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import QuestionMultipleChoiceTab from "./QuestionMultipleChoiceTab";
-import { Question, QuestionType } from "../../../../models/quiz";
+import { Question, QuestionType } from "../../../../models";
 import QuestionSingleChoiceTab from "./QuestionSingleChoiceTab";
 import QuestionTrueFalseTab from "./QuestionTrueFalseTab";
 import QuestionFillInTab from "./QuestionFillInTab";

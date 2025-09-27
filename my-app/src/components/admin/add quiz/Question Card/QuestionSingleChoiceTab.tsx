@@ -1,5 +1,5 @@
 import React from "react";
-import { Answer, Question } from "../../../../models/quiz";
+import { Answer, Question } from "../../../../models";
 
 interface QuestionSingleChoiceTabProps {
     question: Question;

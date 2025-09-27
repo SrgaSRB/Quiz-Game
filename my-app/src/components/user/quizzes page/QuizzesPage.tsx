@@ -1,6 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { QuizDashboardDto } from "../../../models";
+import { quizService } from "../../../services/quizService";
+import Loader from "../../shared/Loader";
+import QuizCard from "./QuizCard";
 
 const QuizzesPage: React.FC = () => {
+
+    const [quizzes, setQuizzes] = useState<Array<QuizDashboardDto>>([]);
+    const [loading, setLoading] = useState<boolean>(false);
+
+
+    useEffect(() => {
+        fetchQuizzes();
+    }, []);
+
+
+    const fetchQuizzes = async () => {
+        setLoading(true);
+
+        try{
+            const response = await quizService.getDashboardQuizzes();
+
+            if(response.status){
+                setQuizzes(response.data || []);
+            }
+        }catch (error) {
+            console.error("Error fetching quizzes:", error);
+        }finally {
+            setLoading(false);
+        }
+    };
+
+    if (loading) {
+        return <Loader/>;
+    }
+
     return (
         <section className="quizzes-section">
             <div className="w-layout-blockcontainer container w-container">
@@ -33,6 +67,7 @@ const QuizzesPage: React.FC = () => {
                         </div>
                     </div>
                     <div className="quizzes-list-div">
+
                         <div className="quiz-div">
                             <div className="div-block-11">
                                 <div className="div-block-10">
@@ -70,80 +105,23 @@ const QuizzesPage: React.FC = () => {
                             </div>
                             <a className="button-1 w-button">Start Quiz</a>
                         </div>
-                        <div className="quiz-div">
-                            <div className="div-block-11">
-                                <div className="div-block-10">
-                                    <div>Programming</div>
-                                </div>
-                                <div className="div-block-10 hard-quiz-tag">
-                                    <div>Easy</div>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="text-block-11">JavaScript Basic</div>
-                                <div className="text-block-12">Basic concepts of the JavaScript programming language - variables, functions, strings</div>
-                            </div>
-                            <div className="div-block-13">
-                                <div className="div-block-12">
-                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd586a9a34b773ec2e3e6a_question-mark.png" loading="lazy" alt="" className="image-8" />
-                                    <div>20</div>
-                                </div>
-                                <div className="div-block-12">
-                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd586aefc709aeb71bd111_hourglass.png" loading="lazy" alt="" className="image-8" />
-                                    <div>20 min</div>
-                                </div>
-                                <div className="div-block-12">
-                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd586abfb7916aaa1fab4f_people.png" loading="lazy" alt="" className="image-8" />
-                                    <div>23</div>
-                                </div>
-                            </div>
-                            <div className="div-block-15">
-                                <div className="div-block-14">
-                                    <div>javascript</div>
-                                </div>
-                                <div className="div-block-14">
-                                    <div>basic</div>
-                                </div>
-                            </div>
-                            <a className="button-1 w-button">Start Quiz</a>
-                        </div>
-                        <div className="quiz-div">
-                            <div className="div-block-11">
-                                <div className="div-block-10">
-                                    <div>Programming</div>
-                                </div>
-                                <div className="div-block-10 medium-quiz-tag">
-                                    <div>Easy</div>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="text-block-11">JavaScript Basic</div>
-                                <div className="text-block-12">Basic concepts of the JavaScript programming language - variables, functions, strings</div>
-                            </div>
-                            <div className="div-block-13">
-                                <div className="div-block-12">
-                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd586a9a34b773ec2e3e6a_question-mark.png" loading="lazy" alt="" className="image-8" />
-                                    <div>20</div>
-                                </div>
-                                <div className="div-block-12">
-                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd586aefc709aeb71bd111_hourglass.png" loading="lazy" alt="" className="image-8" />
-                                    <div>20 min</div>
-                                </div>
-                                <div className="div-block-12">
-                                    <img src="https://cdn.prod.website-files.com/68cb607f40ea6feccc11acb9/68cd586abfb7916aaa1fab4f_people.png" loading="lazy" alt="" className="image-8" />
-                                    <div>23</div>
-                                </div>
-                            </div>
-                            <div className="div-block-15">
-                                <div className="div-block-14">
-                                    <div>javascript</div>
-                                </div>
-                                <div className="div-block-14">
-                                    <div>basic</div>
-                                </div>
-                            </div>
-                            <a className="button-1 w-button">Start Quiz</a>
-                        </div>
+
+                        {quizzes.map((quiz, index) => (
+                            <QuizCard
+                                key={index}
+                                title={quiz.title}
+                                description={quiz.description}
+                                totalQuestions={quiz.totalQuestions}
+                                timeLimitMinutes={quiz.timeLimitMinutes}
+                                totalAttempts={quiz.totalAttempts}
+                                categoryName={quiz.categoryName}
+                                difficultyLevel={quiz.difficultyLevel}
+                                tags={quiz.tags}
+                            />
+                        ))}
+
+
+
                     </div>
                 </div>
             </div>

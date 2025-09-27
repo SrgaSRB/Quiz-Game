@@ -1,5 +1,4 @@
 import react from "react";
-import { Question } from "../../../../models/quiz";
 
 const QuestionTrueFalseTab: React.FC = () => {
 

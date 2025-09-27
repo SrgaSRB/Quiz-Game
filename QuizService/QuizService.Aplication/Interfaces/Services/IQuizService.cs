@@ -10,5 +10,6 @@ namespace QuizService.Aplication.Interfaces.Services
     public interface IQuizService
     {
         Task CreateQuizAsync(QuizDTO quizDTO, CancellationToken ct = default);
+        Task <IEnumerable<QuizDashboardDTO>> GetAllQuizzesForDashboardAsync(CancellationToken ct = default);
     }
 }

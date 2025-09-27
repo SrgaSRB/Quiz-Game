@@ -31,5 +31,19 @@ namespace QuizService.API.Controllers
                 return new ResponsePackage<string>(false, $"Error creating quiz: {ex.Message}");
             }
         }
+
+        [HttpGet("dashboard")]
+        public async Task<ResponsePackage<IEnumerable<QuizDashboardDTO>>> GetDashboardDataAsync(CancellationToken ct = default)
+        {
+            try
+            {
+                var dashboardData = await _quizService.GetAllQuizzesForDashboardAsync(ct);
+                return new ResponsePackage<IEnumerable<QuizDashboardDTO>>(dashboardData, true, "Success");
+            }
+            catch (Exception ex)
+            {
+                return new ResponsePackage<IEnumerable<QuizDashboardDTO>>(false, ex.Message);
+            }
+        }
     }
 }

@@ -1,3 +1,6 @@
+// ============================================
+// ENUM 
+// ============================================
 export enum QuestionType {
     SingleChoice = 1,
     MultipleChoice = 2,
@@ -22,8 +25,11 @@ export enum UserRole {
     Admin = 2
 }
 
+// ============================================
+// DOMAIN MODELS
+// ============================================
 export interface Entity {
-    id?: string; // Guid is on backend side
+    id?: string; // Guid kao string
     createdAt?: Date;
     isDeleted?: boolean;
 }
@@ -31,7 +37,7 @@ export interface Entity {
 export interface Answer extends Entity {
     text: string;
     isCorrect: boolean;
-    questionId: string; // Guid is on backend side
+    questionId: string;
     question?: Question;
 }
 
@@ -46,7 +52,7 @@ export interface Question extends Entity {
     type: QuestionType;
     points: number;
     difficulty?: QuestionDifficulty;
-    quizId: string; // Guid is on backend side
+    quizId: string;
     quiz?: Quiz;
     answers: Answer[];
     userAnswers?: UserAnswer[];
@@ -57,8 +63,8 @@ export interface Quiz extends Entity {
     description: string;
     timeLimitMinutes: number;
     difficultyLevel: QuizDifficulty;
-    categoryId: string; // Guid is on backend side
-    createdByUserId: string; // Guid is on backend side
+    categoryId: string;
+    createdByUserId: string;
     category?: Category;
     createdBy?: User;
     questions: Question[];
@@ -69,7 +75,7 @@ export interface User extends Entity {
     name: string;
     username: string;
     email: string;
-    passwordHash?: string; // Usually not sent to frontend
+    passwordHash?: string;
     profileImage?: string;
     role: UserRole;
     quizAttempts?: QuizAttempt[];
@@ -81,8 +87,8 @@ export interface QuizAttempt extends Entity {
     score: number;
     percentage: number;
     timeSpentSeconds: number;
-    userId: string; // Guid is on backend side
-    quizId: string; // Guid is on backend side
+    userId: string;
+    quizId: string;
     user?: User;
     quiz?: Quiz;
     userAnswers?: UserAnswer[];
@@ -91,56 +97,16 @@ export interface QuizAttempt extends Entity {
 export interface UserAnswer extends Entity {
     answerText?: string;
     booleanAnswer?: boolean;
-    quizAttemptId: string; // Guid is on backend side
-    questionId: string; // Guid is on backend side
+    quizAttemptId: string;
+    questionId: string;
     quizAttempt?: QuizAttempt;
     question?: Question;
     userAnswerSelections?: UserAnswerSelection[];
 }
 
 export interface UserAnswerSelection extends Entity {
-    userAnswerId: string; // Guid is on backend side
-    answerId: string; // Guid is on backend side
+    userAnswerId: string;
+    answerId: string;
     userAnswer?: UserAnswer;
     answer?: Answer;
-}
-
-export interface CreateQuizRequest {
-    title: string;
-    description: string;
-    timeLimitMinutes: number;
-    difficultyLevel: QuizDifficulty;
-    categoryId: string; // ID postojeće kategorije (prazan ako je nova)
-    questions: CreateQuestionRequest[];
-    newCategoryName?: string; // Ime nove kategorije (ako se kreira nova)
-}
-
-export interface CreateQuestionRequest {
-    text: string;
-    type: QuestionType;
-    points: number;
-    difficulty?: QuestionDifficulty;
-    answers: CreateAnswerRequest[];
-}
-
-export interface CreateAnswerRequest {
-    text: string;
-    isCorrect: boolean;
-}
-
-export interface CreateCategoryRequest {
-    name: string;
-    description?: string;
-}
-
-export interface UpdateQuizRequest extends CreateQuizRequest {
-    id: string;
-}
-
-export interface UpdateQuestionRequest extends CreateQuestionRequest {
-    id?: string; 
-}
-
-export interface UpdateAnswerRequest extends CreateAnswerRequest {
-    id?: string; 
 }

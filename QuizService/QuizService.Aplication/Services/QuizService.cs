@@ -89,5 +89,22 @@ namespace QuizService.Aplication.Services
             await _quizRepository.SaveChangesAsync(ct);
         }
 
+        public async Task<IEnumerable<QuizDashboardDTO>> GetAllQuizzesForDashboardAsync(CancellationToken ct = default)
+        {
+            var quizzes = await _quizRepository.QueryAsync(q => 
+                q.Where(quiz => quiz.IsDeleted == false)
+                .Select(quiz => new QuizDashboardDTO
+                {
+                    Title = quiz.Title,
+                    Description = quiz.Description,
+                    TimeLimitMinutes = quiz.TimeLimitMinutes,
+                    DifficultyLevel = quiz.DifficultyLevel,
+                    TotalQuestions = quiz.Questions.Count,
+                    TotalAttempts = quiz.QuizAttempts.Count,
+                    CategoryName = quiz.Category.Name
+                }), ct);
+
+            return quizzes;
+        }
     }
 }

@@ -45,6 +45,7 @@ builder.Services.AddScoped<IUserReposotory, UserRepository>();
 builder.Services.AddScoped<IQuizService, QuizService.Aplication.Services.QuizService>();
 builder.Services.AddScoped<IQuizReposotory, QuizRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

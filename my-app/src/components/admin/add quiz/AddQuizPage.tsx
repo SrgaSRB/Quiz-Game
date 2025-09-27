@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import QuestionTrueFalseTab from "./Question Card/QuestionTrueFalseTab";
 import QuestionCard from "./Question Card/QuestionCard";
-import { Quiz, Question, QuizDifficulty, QuestionType, Answer, CreateQuizRequest, CreateQuestionRequest, CreateAnswerRequest, Category } from "../../../models/quiz";
+import { Quiz, Question, QuizDifficulty, QuestionType, Answer, CreateQuizRequest, CreateQuestionRequest, CreateAnswerRequest, Category } from "../../../models";
 import { quizService } from "../../../services/quizService";
+import { categoryService } from "../../../services/categoryService";
+import Loader from "../../shared/Loader";
 
 const AddQuizPage: React.FC = () => {
 
@@ -26,16 +28,24 @@ const AddQuizPage: React.FC = () => {
 
 
     useEffect(() => {
-        // Fetch categories from API
+        fetchCategories();
     }, []);
 
     const fetchCategories = async () => {
+        setLoading(true);
+
         try {
-            const response = await fetch("/api/categories");
-            const data = await response.json();
-            setCategories(data);
+            const response = await categoryService.getAllCategories();
+
+            if (response.status) {
+                setCategories(response.data);
+            } else {
+                console.error("Failed to fetch categories:", response.message);
+            }
         } catch (error) {
             console.error("Error fetching categories:", error);
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -140,14 +150,13 @@ const AddQuizPage: React.FC = () => {
         }
 
         try {
-            // Pripremi podatke za slanje na backend
             const quizDTO: CreateQuizRequest = {
                 title: quizInfo.title || "",
                 description: quizInfo.description || "",
                 timeLimitMinutes: quizInfo.timeLimitMinutes || 0,
                 difficultyLevel: quizInfo.difficultyLevel || QuizDifficulty.Easy,
-                categoryId: newCategoryChecked ? "" : selectedCategoryId, 
-                newCategoryName: newCategoryChecked ? newCategoryName : undefined, 
+                categoryId: newCategoryChecked ? "" : selectedCategoryId,
+                newCategoryName: newCategoryChecked ? newCategoryName : undefined,
                 questions: questions.map((question): CreateQuestionRequest => ({
                     text: question.text,
                     type: question.type,
@@ -165,8 +174,7 @@ const AddQuizPage: React.FC = () => {
 
                 if (response.status) {
                     alert("Quiz successfully created!");
-                    
-                    // Reset forme nakon uspešnog kreiranja
+
                     setQuizInfo({
                         title: "",
                         description: "",
@@ -196,6 +204,11 @@ const AddQuizPage: React.FC = () => {
             setLoading(false);
         }
     };
+
+
+    if(loading) {
+        return <Loader fixed={true} />;
+    }
 
     return (
         <section className="add-quiz-section">

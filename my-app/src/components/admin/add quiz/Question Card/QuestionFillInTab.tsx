@@ -1,5 +1,5 @@
 import React from "react";
-import { Question } from "../../../../models/quiz";
+import { Question } from "../../../../models";
 
 interface QuestionFillInTabProps {
     question: Question;

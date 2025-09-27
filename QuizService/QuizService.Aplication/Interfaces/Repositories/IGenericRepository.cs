@@ -14,6 +14,7 @@ namespace QuizService.Aplication.Interfaces.Persistence
         Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate, CancellationToken ct = default);
         Task<T?> FirstOrDefaultAsync(Expression<Func<T, bool>> predicate, CancellationToken ct = default);
         Task<bool> ExistsAsync(Expression<Func<T, bool>> predicate, CancellationToken ct = default);
+        public Task<List<TResult>> QueryAsync<TResult>(Func<IQueryable<T>, IQueryable<TResult>> query, CancellationToken ct = default);
 
 
         Task AddAsync(T entity, CancellationToken ct = default);

@@ -54,7 +54,7 @@ namespace QuizService.Infrastructure.Repositories
 
         public virtual async Task<IEnumerable<T>> GetAllAsync(CancellationToken ct = default)
         {
-            return await _dbSet.ToListAsync(ct);
+            return await _dbSet.AsNoTracking().ToListAsync(ct);
         }
 
         public virtual async Task<T?> GetByIdAsync(Guid id, CancellationToken ct = default)
@@ -75,6 +75,12 @@ namespace QuizService.Infrastructure.Repositories
         public virtual void Update(T entity, CancellationToken ct = default)
         {
             _dbSet.Update(entity);
+        }
+
+        public async Task<List<TResult>> QueryAsync<TResult>(Func<IQueryable<T>, IQueryable<TResult>> query, CancellationToken ct = default)
+        {
+            var q = _dbSet.AsNoTracking().AsQueryable();
+            return await query(q).ToListAsync(ct);
         }
     }
 }

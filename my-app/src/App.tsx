@@ -9,7 +9,7 @@ import { RequireAuth } from './components/Auth/RequireAuth';
 import RootLayout from './layouts/RootLayout';
 import UserLayout from './layouts/UserLayout';
 import RangListPage from './components/user/rank list/RangListPage';
-import QuizzesPage from './components/user/QuizzesPage';
+import QuizzesPage from './components/user/quizzes page/QuizzesPage';
 import QuizPage from './components/user/QuizPage';
 import QuizDetailsView from './components/user/QuizDetalisView';
 import FinishQuizPage from './components/user/FinishQuizPage';
